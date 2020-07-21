@@ -1,0 +1,4 @@
+[alias]
+b = "xbuild --target x86_64-rust_os.json" # 使用cargo b来build
+#[build]
+target = "x86_64-rust_os.json"  # 教程中的例子无法使用
