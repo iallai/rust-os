@@ -1,6 +1,8 @@
 #![no_std] //不使用标准库
 #![no_main] //禁用所有 rust-level的入口
 
+mod vga_buffer;
+
 use core::panic::PanicInfo;
 
 static HELLO: &[u8] = b"hello world!";
@@ -15,6 +17,7 @@ pub extern "C" fn _start() -> ! {
             //每个字符由一个 ASCII byte 和 color byte组成
         }
     }
+    vga_buffer::print_something();
     loop {}
 }
 
